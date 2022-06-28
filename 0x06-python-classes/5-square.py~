@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+""" the square class module """
+
+
+class Square:
+     
