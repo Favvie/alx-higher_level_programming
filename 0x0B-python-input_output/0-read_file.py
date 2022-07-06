@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-"""a module that writes to a file"""
+"""
+    module to read a file and print to stdout
+"""
 
 
 def read_file(filename=""):
-    """ afunction that reads text froma file"""
-    with open(filename, mode="r", encoding="utf-8") as f:
-        text = f.read()
-        print(text)
+        """
+        function accepts a filename and attempts to
+        read from the file
+    """
+        with open(filename, encoding="utf_8") as my_file:
+            print(my_file.read(), end="")
