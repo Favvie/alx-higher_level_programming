@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+""" a module that save a json string to file"""
+import json
+
+
+def save_to_json_file(my_obj, filename):
+    """ a function that saves an object"""
+    with open(filename, mode="w", encoding="utf-8") as f:
+        json.dump(my_obj, f)
