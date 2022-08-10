@@ -1,0 +1,2 @@
+-- script to sow all databases
+SHOW DATABASES;
