@@ -11,4 +11,5 @@ if __name__ == '__main__':
                    .format(sys.argv[4]))
     states = cursor.fetchall()
     for state in states:
-        print(state)
+        if state[1] == sys.argv[4]:
+            print(state)
