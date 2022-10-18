@@ -7,7 +7,7 @@ request({ url: process.argv[2], json: true }, function (error, response, body) {
     const object = {};
     for (const todo of body) {
       if (todo.completed === true) {
-        if (object.hasOwnProperty(todo.userId)) {
+        if (object[todo.userId]) {
           object[todo.userId] = object[todo.userId] + 1;
         } else {
           object[todo.userId] = 1;
