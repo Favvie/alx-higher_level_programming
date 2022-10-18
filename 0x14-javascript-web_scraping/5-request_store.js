@@ -3,14 +3,16 @@
 const request = require('request');
 const fs = require('fs');
 
-request({ url: process.argv[2], json: true }, function (error, response, body) {
-  if (!error && response.statusCode === 200) {
+/*request({ url: process.argv[2], json: true }, function (error, response, body) {
+  if (!error) {
     fs.writeFile(process.argv[3], body, 'utf-8', function (err) {
       if (err) {
-        return console.error('error from file: ' + err);
+        return console.error(err);
       }
     });
   } else {
-    return console.error('error from request: ' + error);
+    return console.error(error);
   }
 });
+*/
+request('http://google.com/doodle.png').pipe(fs.createWriteStream(process.argv[2]))
