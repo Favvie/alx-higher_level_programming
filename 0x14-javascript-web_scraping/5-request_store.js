@@ -3,7 +3,7 @@
 const request = require('request');
 const fs = require('fs');
 
-/*request({ url: process.argv[2], json: true }, function (error, response, body) {
+/* request({ url: process.argv[2], json: true }, function (error, response, body) {
   if (!error) {
     fs.writeFile(process.argv[3], body, 'utf-8', function (err) {
       if (err) {
@@ -15,4 +15,4 @@ const fs = require('fs');
   }
 });
 */
-request('http://google.com/doodle.png').pipe(fs.createWriteStream(process.argv[2]))
+request('http://google.com/doodle.png').pipe(fs.createWriteStream(process.argv[2]));
