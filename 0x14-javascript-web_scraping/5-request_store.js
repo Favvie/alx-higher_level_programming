@@ -15,4 +15,4 @@ const fs = require('fs');
   }
 });
 */
-request('http://google.com/doodle.png').pipe(fs.createWriteStream(process.argv[2]));
+request(process.argv[2]).pipe(fs.createWriteStream(process.argv[3]));
